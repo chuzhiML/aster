@@ -77,3 +77,4 @@ class TfExampleDecoder(object):
     lexicon_sparse = tf.string_split([joined_lexicon], delimiter='\t')
     lexicon = tf.sparse_tensor_to_dense(lexicon_sparse, default_value='')[0]
     return lexicon
+
