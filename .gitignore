@@ -101,7 +101,7 @@ ENV/
 .mypy_cache/
 
 # protobuf
-*_pb2.py
+# *_pb2.py
 
 # experiments logs
 log*/
