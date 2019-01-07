@@ -5,7 +5,7 @@ from os.path import join, dirname, realpath, exists
 import tensorflow as tf
 
 OPLIB_NAME = 'aster'
-OPLIB_SUFFIX = '.dylib'
+OPLIB_SUFFIX = '.so'
 
 
 
