@@ -189,7 +189,7 @@ train_input_reader {
   num_readers: 4
   shuffle: true
   tf_record_input_reader {
-    input_path: "/data/ocr/Synthetic_Chinese_String_Dataset/chinese_v1.tfrecord"
+    input_path: "/data/ocr/Synthetic_Chinese_String_Dataset/chinese.tfrecord"
   }
 }
 

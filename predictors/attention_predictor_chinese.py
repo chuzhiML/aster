@@ -29,7 +29,8 @@ class AttentionPredictor(predictor.Predictor):
                  loss=None,
                  sync=False,
                  lm_rnn_cell=None,
-                 is_training=True):
+                 is_training=True,
+                 num_classes=5990):
         super(AttentionPredictor, self).__init__(is_training)
         self._rnn_cell = rnn_cell
         self._rnn_regularizer = rnn_regularizer
@@ -42,6 +43,7 @@ class AttentionPredictor(predictor.Predictor):
         self._sync = sync
         self._lm_rnn_cell = lm_rnn_cell
         self._loss = loss
+        self.num_classes = num_classes
 
         if not self._is_training and not self._beam_width > 0:
             raise ValueError('Beam width must be > 0 during inference')
@@ -54,9 +56,9 @@ class AttentionPredictor(predictor.Predictor):
     def end_label(self):
         return 1
 
-    @property
-    def num_classes(self):
-        return self._label_map.num_classes + 2
+    # @property
+    # def num_classes(self):
+    #     return self._label_map.num_classes + 2
 
     def predict(self, feature_maps, scope=None):
         if not isinstance(feature_maps, (list, tuple)):

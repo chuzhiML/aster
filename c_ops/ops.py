@@ -3,7 +3,6 @@ import shutil
 import uuid
 from os.path import join, dirname, realpath, exists
 import tensorflow as tf
-
 OPLIB_NAME = 'aster'
 OPLIB_SUFFIX = '.so'
 
