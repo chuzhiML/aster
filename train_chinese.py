@@ -92,7 +92,7 @@ FLAGS = flags.FLAGS
 
 
 def get_configs_from_exp_dir():
-  pipeline_config_path = os.path.join(FLAGS.exp_dir, 'config/trainval.prototxt')
+  pipeline_config_path = os.path.join(FLAGS.exp_dir, 'config/trainval_chinese.prototxt')
   pipeline_config = pipeline_pb2.TrainEvalPipelineConfig()
   with tf.gfile.GFile(pipeline_config_path, 'r') as f:
     text_format.Merge(f.read(), pipeline_config)

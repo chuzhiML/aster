@@ -23,7 +23,7 @@ class TfExampleDecoder(object):
       fields.TfExampleFields.width: \
         tf.FixedLenFeature((), tf.int64, default_value=1),
       fields.TfExampleFields.transcript: \
-        tf.FixedLenFeature((), tf.string, default_value=''),
+        tf.FixedLenFeature([10], tf.int64),
       fields.TfExampleFields.keypoints: \
         tf.VarLenFeature(tf.float32),
       fields.TfExampleFields.lexicon: \

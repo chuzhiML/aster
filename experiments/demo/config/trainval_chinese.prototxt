@@ -158,14 +158,6 @@ train_config {
       target_width: 256
     }
   }
-  data_augmentation_options {
-    string_filtering {
-      lower_case: false
-      include_charset {
-        built_in_set: ALLCASES_SYMBOLS
-      }
-    }
-  }
   keep_checkpoint_every_n_hours: 4
   optimizer {
     adadelta_optimizer {

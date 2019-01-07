@@ -74,7 +74,7 @@ def main(_):
                 continue
 
             # extract groundtruth, 转化为
-            groundtruth_text_label = list(map(lambda x: int(x), groundtruth_file.rstrip('\n').split(' ')[1:]))
+            groundtruth_text_label = list(map(lambda x: int(x), groundtruth_lines[index].rstrip('\n').split(' ')[1:]))
 
             # write example
             example = tf.train.Example(features=tf.train.Features(feature={

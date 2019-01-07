@@ -26,8 +26,7 @@ class InputReaderTest(tf.test.TestCase):
         'image/format': feature_pb2.Feature(
             bytes_list=feature_pb2.BytesList(value=['jpeg'.encode('utf-8')])),
         'image/transcript': feature_pb2.Feature(
-            bytes_list=feature_pb2.BytesList(value=[
-                'hello'.encode('utf-8')]))
+            int64_list=feature_pb2.Int64List(value=[2] * 10))
     }))
     writer.write(example.SerializeToString())
     writer.close()

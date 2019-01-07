@@ -119,7 +119,7 @@ class AttentionPredictor(predictor.Predictor):
                 groundtruth_text = groundtruth_text[:, ::-1]
             # change to chinese version
             text_labels = groundtruth_text
-            text_lengths = tf.reduce_sum(tf.ones([batch_size, text_lengths]), axis=1)
+            text_lengths = tf.reduce_sum(tf.ones([batch_size, text_lengths], dtype=tf.int32), axis=1)
 
             start_labels = tf.fill([batch_size, 1], tf.constant(self.start_label, tf.int64))
             end_labels = tf.fill([batch_size, 1], tf.constant(self.end_label, tf.int64))

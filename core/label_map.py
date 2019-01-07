@@ -91,7 +91,7 @@ class LabelMap(object):
     Args:
       labels: int32 tensor with shape [batch_size, max_label_length]
     Returns:
-      text: string tensor with shape [batch_size]
+      test: string tensor with shape [batch_size]
     """
     if labels.dtype == tf.int32 or labels.dtype == tf.int64:
       labels = tf.cast(labels, tf.int64)
